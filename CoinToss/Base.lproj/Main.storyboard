@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.20" systemVersion="15A204h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-UltraLight</string>
+            <string>HelveticaNeue-UltraLight</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoinToss" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HEADS OR TAILS???" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlw-MZ-mp0">
+                                <rect key="frame" x="20" y="356" width="374" height="23"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5QJ-UT-Qhs">
+                                <rect key="frame" x="20" y="538" width="374" height="51"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="34"/>
+                                <state key="normal" title="Flip Coin"/>
+                                <connections>
+                                    <action selector="flipCoin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="McU-de-HsR"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dsg-3A-8kQ">
+                                <rect key="frame" x="87" y="40" width="240" height="240"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5QJ-UT-Qhs" firstAttribute="trailing" secondItem="mlw-MZ-mp0" secondAttribute="trailing" id="D7T-5M-Pj5"/>
+                            <constraint firstItem="mlw-MZ-mp0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Sbr-RF-1nK"/>
+                            <constraint firstItem="dsg-3A-8kQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="V9N-MM-gVs"/>
+                            <constraint firstItem="5QJ-UT-Qhs" firstAttribute="leading" secondItem="mlw-MZ-mp0" secondAttribute="leading" id="Vcp-8B-f29"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5QJ-UT-Qhs" secondAttribute="bottom" constant="147" id="XLR-j6-yCz"/>
+                            <constraint firstItem="dsg-3A-8kQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="67" id="fea-nX-l9n"/>
+                            <constraint firstItem="mlw-MZ-mp0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hom-Au-nYH"/>
+                            <constraint firstItem="mlw-MZ-mp0" firstAttribute="centerX" secondItem="dsg-3A-8kQ" secondAttribute="centerX" id="koD-IC-jVM"/>
+                            <constraint firstItem="5QJ-UT-Qhs" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ksi-Ix-Gey"/>
+                            <constraint firstItem="mlw-MZ-mp0" firstAttribute="top" secondItem="dsg-3A-8kQ" secondAttribute="bottom" constant="76" id="zQa-zh-kgR"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="coinImage" destination="dsg-3A-8kQ" id="VNt-WR-zqB"/>
+                        <outlet property="resultLabel" destination="mlw-MZ-mp0" id="I76-SZ-ZXY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="422" y="358"/>
+        </scene>
+    </scenes>
+</document>
